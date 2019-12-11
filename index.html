@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>final project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="instStore-app">
+  <h2>{{message}}</h2>
+    <p class="cart flyer" v-on:click="emptyCart">  Cart:{{cartNumb()}}</p>
+  <new-item v-on:clicky="addToInv"></new-item>
+  <instrument v-for="(ins,index) in instArray" v-bind:index="index" v-bind:price="ins.price"
+     v-bind:brand="ins.brand"
+              v-bind:type="ins.type"      v-bind:name="ins.name" v-bind:image="ins.image" v-on:clicked="addToCart"></instrument>
+<!--  <cart v-for="items in cartArray" v-bind:name=item.name></cart>-->
+  <p>  {{message}}</p>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
